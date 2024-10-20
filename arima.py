@@ -66,27 +66,27 @@ print("Large Mask Forecast for 2017, 2018, 2019:", large_mask_forecast)
 small_mask_forecast = forecast_mask_sales('Small Mask (units)', steps=3)
 print("Small Mask Forecast for 2017, 2018, 2019:", small_mask_forecast)
 
-# Misalkan 'y_true' adalah nilai aktual untuk evaluasi
-# Ganti dengan data aktualmu untuk periode yang relevan
-y_true_large_mask = [717150, 739785, 757137]  # Ganti dengan nilai aktual untuk forecast Large Mask
-y_pred_large_mask = large_mask_forecast  # Hasil forecast Large Mask
+# Assuming 'y_true' is the actual values for evaluation
+# Replace with your actual data for the relevant period
+y_true_large_mask = [717150, 739785, 757137]  # Replace with actual values for Large Mask forecast
+y_pred_large_mask = large_mask_forecast  # Large Mask forecast results
 
-y_true_small_mask = [302037, 316683, 329794]  # Ganti dengan nilai aktual untuk forecast Small Mask
-y_pred_small_mask = small_mask_forecast  # Hasil forecast Small Mask
+y_true_small_mask = [302037, 316683, 329794]  # Replace with actual values for Small Mask forecast
+y_pred_small_mask = small_mask_forecast  # Small Mask forecast results
 
-# Menghitung MAE dan RMSE untuk Large Mask
+# Calculate MAE and RMSE for Large Mask
 mae_large = mean_absolute_error(y_true_large_mask, y_pred_large_mask)
 rmse_large = np.sqrt(mean_squared_error(y_true_large_mask, y_pred_large_mask))
 
-# Menghitung MAE dan RMSE untuk Small Mask
+# Calculating MAE and RMSE for Small Mask
 mae_small = mean_absolute_error(y_true_small_mask, y_pred_small_mask)
 rmse_small = np.sqrt(mean_squared_error(y_true_small_mask, y_pred_small_mask))
 
-# Menampilkan hasil evaluasi
-print(f"\nEvaluasi Model untuk Large Mask:")
+# Display the evaluation results
+print(f"\nModel Evaluation for Large Mask:")
 print(f"Mean Absolute Error (MAE): {mae_large}")
 print(f"Root Mean Square Error (RMSE): {rmse_large}")
 
-print(f"\nEvaluasi Model untuk Small Mask:")
+print(f"\nModel Evaluation for Small Mask:")
 print(f"Mean Absolute Error (MAE): {mae_small}")
 print(f"Root Mean Square Error (RMSE): {rmse_small}")

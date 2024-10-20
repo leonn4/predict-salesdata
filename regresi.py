@@ -31,6 +31,6 @@ future_years = pd.DataFrame({'Year': [2017, 2018, 2019]})  # Tahun yang ingin di
 # future predict
 y_pred_future = model_linreg.predict(future_years)
 
-# Menampilkan hasil prediksi untuk tahun mendatang
+# print prediction
 print(list(zip(future_years['Year'], y_pred_future)))
 
